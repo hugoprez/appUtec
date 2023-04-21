@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:apputec/paginas/figura/tarjeta.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final List _post = [
+      'Pantalla #1',
+      'Pantalla #2',
+      'Pantalla #3',
+      'Pantalla #3',
+      'Pantalla #3'
+    ];
     return Column(
       children: [
         Container(
@@ -40,15 +48,16 @@ class Home extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Container(
-                              child: const Text("Hugo Alberto Antillón Pérez",style: TextStyle(color: Colors.white))),
+                              child: const Text("Hugo Alberto Antillón Pérez",
+                                  style: TextStyle(color: Colors.white))),
                           Container(
                               padding: EdgeInsets.all(15.0),
-                              child: const Text("25-5030-2018",style: TextStyle(color: Colors.white))),
+                              child: const Text("25-5030-2018",
+                                  style: TextStyle(color: Colors.white))),
                         ],
                       ),
                     ],
                   ),
-
                   height: 230,
                   //decoration: BoxDecoration(border: Border.all(color: Colors.black,width: 2)),
                 ),
@@ -63,7 +72,23 @@ class Home extends StatelessWidget {
               ),
             ),
           ),
-        )
+        ),
+        SizedBox(
+          height: 25,
+        ),
+        Padding(
+          padding: EdgeInsets.all(15),
+          child: Container(
+            height: 150,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: _post.length,
+              itemBuilder: (context, index) {
+                return Tarjeta(child: _post[index]);
+              },
+            ),
+          ),
+        ),
       ],
     );
   }

@@ -6,13 +6,19 @@ class RecuperarContrasena extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      
       children: [
         Expanded(
+<<<<<<< Updated upstream
           child: Container(
             alignment: Alignment.center,
           child: Text("Interfaz de Carlos Dueñas"),
         ))
+=======
+            child: Container(
+          alignment: Alignment.center,
+          child: Text("Interfaz de Manuel"),
+        )),
+>>>>>>> Stashed changes
       ],
     );
   }
