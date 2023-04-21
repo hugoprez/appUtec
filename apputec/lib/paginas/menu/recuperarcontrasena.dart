@@ -11,7 +11,7 @@ class RecuperarContrasena extends StatelessWidget {
         Expanded(
           child: Container(
             alignment: Alignment.center,
-          child: Text("Interfaz de Manuel"),
+          child: Text("Interfaz de Carlos Dueñas"),
         ))
       ],
     );

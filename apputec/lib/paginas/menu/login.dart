@@ -11,7 +11,7 @@ class Login extends StatelessWidget {
         Expanded(
           child: Container(
             alignment: Alignment.center,
-          child: Text("Interfaz de Carlos Dueñasssss"),
+          child: Text("Interfaz de Manuel Alas"),
         ))
       ],
     );
