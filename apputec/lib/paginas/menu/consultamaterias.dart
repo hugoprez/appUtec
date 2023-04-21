@@ -112,7 +112,7 @@ class _ConsultarMateriasState extends State<ConsultarMaterias> {
                 height: 25,
               ),
               Text(
-                "Buscar Estudiante",
+                "Buscar Estudiantes",
                 style: TextStyle(
                     fontSize: 23, color: Colors.white, fontWeight: FontWeight.bold),
               ),
