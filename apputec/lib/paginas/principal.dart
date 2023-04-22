@@ -23,9 +23,9 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
  final List<Widget> _Paginas = [
+    Login(),
     Home(),
     ConsultarMaterias(),
-    Login(),
     RecuperarContrasena()
   ];
 
@@ -41,10 +41,10 @@ class _MyHomePageState extends State<MyHomePage> {
             type: BottomNavigationBarType.fixed,
             onTap: _NavigationBotonBar,
              items:[
-               BottomNavigationBarItem(icon: Icon(Icons.home ),label: "Home"),
-              BottomNavigationBarItem(icon: Icon(Icons.food_bank_sharp),label: "Materias"),
               BottomNavigationBarItem(icon: Icon(Icons.local_pizza),label: "Login"),
-               BottomNavigationBarItem(icon: Icon(Icons.local_pizza),label: "Recuperar contra")
+              BottomNavigationBarItem(icon: Icon(Icons.home ),label: "Home"),
+              BottomNavigationBarItem(icon: Icon(Icons.food_bank_sharp),label: "Materias"),
+              BottomNavigationBarItem(icon: Icon(Icons.local_pizza),label: "Recuperar contra")
             ],
         ),
 
