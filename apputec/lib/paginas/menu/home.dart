@@ -48,8 +48,8 @@ class Home extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Container(
-                              child: const Text("Hugo Alberto Antillón Pérez",
-                                  style: TextStyle(color: Colors.white))),
+                                child: const Text("Hugo Alberto Antillón Pérez",
+                                    style: TextStyle(color: Colors.white))),
                           Container(
                               padding: EdgeInsets.all(15.0),
                               child: const Text("25-5030-2018",
