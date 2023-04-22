@@ -152,8 +152,8 @@ Container _nombreimput(){
           style: TextStyle(fontSize: 20),
           decoration: InputDecoration(
               icon: Icon(Icons.contact_emergency, color: Colors.grey),
-              hintText: 'Ingrese su Usuario',
-              labelText: 'Usuario',
+              hintText: 'Usuario',
+              labelText: 'Ingrese su usuario',
               border: InputBorder.none),
         )
     );
@@ -170,7 +170,7 @@ Container _passwordinput() {
           decoration: InputDecoration(
               icon: Icon(Icons.password, color: Colors.grey),
               hintText: 'Contraseña',
-              labelText: 'contraseña',
+              labelText: 'Ingrese su Contraseña',
               border: InputBorder.none),
           obscureText: true,
         )); //caja de texto

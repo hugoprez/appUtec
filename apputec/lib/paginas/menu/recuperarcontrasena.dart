@@ -167,7 +167,7 @@ Container _correo(){
           style: TextStyle(fontSize: 20),
           decoration: InputDecoration(
               icon: Icon(Icons.contact_emergency, color: Colors.grey),
-              hintText: 'Ingrese su Usuario',
+              hintText: 'Correo de Recuperacion',
               labelText: 'Correo de Recuperacion',
               border: InputBorder.none),
         )
