@@ -13,7 +13,7 @@ class _ConsultarMateriasState extends State<ConsultarMaterias> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF5D0A28),
+      //backgroundColor: Color(0xFF5D0A28),
       body: getBody(),
     );
   }
@@ -21,35 +21,36 @@ class _ConsultarMateriasState extends State<ConsultarMaterias> {
   Widget getBody() {
     return Column(
       children: [
-                Container(
+        Container(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
                 child: Icon(Icons.arrow_back,
-                    color: Colors.black.withOpacity(0.5),size: 50),
+                    color: Colors.black.withOpacity(0.5), size: 50),
                 decoration: BoxDecoration(
                     border: Border.all(color: Colors.black54),
                     borderRadius: BorderRadius.circular(50)),
               ),
               Container(
-                //padding: EdgeInsets.only(top: 5),
-                height: 50,
-                child: Column(
-                  children: [
-                    Container(
-                      child: Text("Maria Torrez",style: TextStyle(fontSize: 25)),
-                    ),
-                    Container(
-                      child: Text("Ingeniero en sistema",style: TextStyle(fontSize: 16)),
-                    ),
-                  ],
-                )
-              ),
+                  //padding: EdgeInsets.only(top: 5),
+                  height: 50,
+                  child: Column(
+                    children: [
+                      Container(
+                        child: Text("Maria Torrez",
+                            style: TextStyle(fontSize: 25)),
+                      ),
+                      Container(
+                        child: Text("Ingeniero en sistema",
+                            style: TextStyle(fontSize: 16)),
+                      ),
+                    ],
+                  )),
               Container(
                 child: Icon(Icons.more_horiz,
-                    color: Colors.black.withOpacity(0.5),size: 50),
+                    color: Colors.black.withOpacity(0.5), size: 50),
                 decoration: BoxDecoration(
                     border: Border.all(color: Colors.black54),
                     borderRadius: BorderRadius.circular(50)),
@@ -57,7 +58,7 @@ class _ConsultarMateriasState extends State<ConsultarMaterias> {
             ],
           ),
           height: 75,
-          decoration: BoxDecoration( color:Colors.white),
+          decoration: BoxDecoration(color: Colors.white),
         ),
         /*Expanded(
           child: Stack(
