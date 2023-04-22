@@ -13,7 +13,7 @@ class _ConsultarMateriasState extends State<ConsultarMaterias> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //backgroundColor: Color(0xFF5D0A28),
+      backgroundColor: Color(0xFF5D0A28),
       body: getBody(),
     );
   }
@@ -21,7 +21,7 @@ class _ConsultarMateriasState extends State<ConsultarMaterias> {
   Widget getBody() {
     return Column(
       children: [
-        Container(
+        /*Container(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -59,8 +59,8 @@ class _ConsultarMateriasState extends State<ConsultarMaterias> {
           ),
           height: 75,
           decoration: BoxDecoration(color: Colors.white),
-        ),
-        /*Expanded(
+        ),*/
+        Expanded(
           child: Stack(
             children: [
               Container(
@@ -135,7 +135,7 @@ class _ConsultarMateriasState extends State<ConsultarMaterias> {
               )
             ],
           ),
-        )*/
+        )
       ],
     );
 
