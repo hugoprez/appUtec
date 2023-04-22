@@ -7,7 +7,7 @@ class Tarjeta extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
+    /*return Card(
       elevation: 8.0,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
       child: Container(
@@ -31,6 +31,15 @@ class Tarjeta extends StatelessWidget {
           ],
         ),
       ),
-    );
+    );*/
+
+    return Card(
+        child: Container(
+      decoration: BoxDecoration(
+        color: Color(0xFF8CCB8E),
+        borderRadius: BorderRadius.circular(20),
+      ),
+      width: 150,
+    ));
   }
 }
