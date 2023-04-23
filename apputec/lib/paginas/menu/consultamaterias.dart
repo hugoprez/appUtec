@@ -60,82 +60,35 @@ class _ConsultarMateriasState extends State<ConsultarMaterias> {
           height: 75,
           decoration: BoxDecoration(color: Colors.white),
         ),*/
-        Expanded(
-          child: Stack(
+        SizedBox(height: 25),
+        Container(
+          child: Column(
             children: [
               Container(
-                padding: EdgeInsets.all(15.0),
                 child: Text(
-                  "Bienvenido!",
-                  style: TextStyle(
-                    fontSize: 35,
-                    color: Colors.white,
-                    fontFamily: 'Roboto',
-                  ),
+                  "Estudiantes",
+                  style: TextStyle(fontSize: 25),
                 ),
-              ),
-              Container(
-                child: Column(children: [
-                  Stack(
-                    children: <Widget>[
-                      Container(
-                        width: 360,
-                        height: 200,
-                        decoration: BoxDecoration(
-                          color: Color(0xFF9D5871),
-                          borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(50),
-                            bottomRight: Radius.circular(50),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 30,
-                        top: 50,
-                        child: Container(
-                          child: Column(
-                            children: [
-                              Container(
-                                  padding: EdgeInsets.only(top: 10),
-                                  child: Text(
-                                    "Estudiantes",
-                                    style: TextStyle(fontSize: 17),
-                                  )),
-                              Container(
-                                  padding: EdgeInsets.only(top: 10),
-                                  child: Text(
-                                    "Ciclo #1",
-                                    style: TextStyle(fontSize: 17),
-                                  ))
-                            ],
-                          ),
-                          width: 300,
-                          height: 75,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(25)),
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 25),
-                  Expanded(
-                    child: Container(
-                      padding: EdgeInsets.only(left: 150),
-                      decoration: BoxDecoration(
-                          border: Border.all(
-                            color: Colors.red,
-                            width: 2.0,
-                          ),
-                          borderRadius: BorderRadius.circular(25)),
-                    ),
-                  )
-                ]),
-                decoration: BoxDecoration(color: Colors.white),
               )
             ],
           ),
-        )
+          decoration: BoxDecoration(
+              color: Colors.white, borderRadius: BorderRadius.circular(15)),
+          height: 150,
+          width: 400,
+
+          padding: EdgeInsets.only(top: 15, left: 50, right: 50),
+        ),
+         SizedBox(height: 25),
+        Expanded(
+          child: Container(
+            margin: EdgeInsets.all(15),
+            //padding: EdgeInsets.only(top: 15, left: 50, right: 50),
+            decoration: BoxDecoration(
+                color: Colors.white, borderRadius: BorderRadius.circular(15)),
+          ),
+        ),
+         SizedBox(height: 25),
       ],
     );
 
