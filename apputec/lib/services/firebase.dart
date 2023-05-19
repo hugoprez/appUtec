@@ -18,3 +18,16 @@ Future<List> getUsuarios() async{
 Future<void> agregarUsuario(String usuario) async {
   await base.collection('Usuario').add({"nombre": usuario});
 }
+
+
+//obtener los estudiantes
+Future<List> getEstudiante() async{
+  List students=[];
+
+  CollectionReference CollectionReferenceEstudiante=base.collection('Estudiante');
+  QuerySnapshot queryestudiante= await CollectionReferenceEstudiante.get();
+  queryestudiante.docs.forEach((documentos) {
+    students.add(documentos.data());
+   });
+  return students;
+}
