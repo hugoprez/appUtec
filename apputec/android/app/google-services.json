@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "78435083263",
+    "firebase_url": "https://bdschool-746b0-default-rtdb.firebaseio.com",
+    "project_id": "bdschool-746b0",
+    "storage_bucket": "bdschool-746b0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:78435083263:android:7079363e709d37d6153dca",
+        "android_client_info": {
+          "package_name": "com.example.apputec"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "78435083263-u42cre7d631ns84hcuq0mqmv8u19fvl4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWpGxDBht7Ww9xVrt8dErojeR0Qin9ojg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "78435083263-u42cre7d631ns84hcuq0mqmv8u19fvl4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

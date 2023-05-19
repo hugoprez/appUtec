@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:apputec/paginas/principal.dart';
+import 'package:firebase_core/firebase_core.dart';
+// Import the generated file
+import 'firebase_options.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
