@@ -2,14 +2,14 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:apputec/services/firebase.dart';
 
-class Principal extends StatefulWidget {
-  const Principal({super.key});
+class MostrarEstudiantes extends StatefulWidget {
+  const MostrarEstudiantes({super.key});
 
   @override
-  State<Principal> createState() => _PrincipalState();
+  State<MostrarEstudiantes> createState() => _MostrarEstudiantesState();
 }
 
-class _PrincipalState extends State<Principal> {
+class _MostrarEstudiantesState extends State<MostrarEstudiantes> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,7 +18,7 @@ class _PrincipalState extends State<Principal> {
         ),
 
         body:FutureBuilder(
-          future: getUsuarios(),
+          future: getEstudiante(),
           builder: ((context,snapshot)
           {
 
@@ -27,45 +27,17 @@ class _PrincipalState extends State<Principal> {
               itemBuilder: (context, index) {
                 //return Text(snapshot.data?[index]['nombre']);
 
-                        return Dismissible(
-                         confirmDismiss: (direction) async{
-                          return true;
-                         },
-
-                        background: 
-                          Container(
-                             color: Colors.red,
-                            child: Icon(Icons.delete),
-                           
+                        return ListTile(
+                        
+                           title: Text('Código: ${snapshot.data?[index]['IdUsuario']}'),
+                          subtitle: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text('Nombre: ${snapshot.data?[index]['NombreEstudiante']}'), 
+                              Text('Apellido: ${snapshot.data?[index]['ApellidoEstudiante']}'), 
+                              Text('Código de Usuario: ${snapshot.data?[index]['IdUsuario']}'),
+                            ],
                           ),
-                          direction: DismissDirection.endToStart,
-
-                          key:snapshot.data?[index]['uid'],
-                          child:ListTile(
-                          title: Text(snapshot.data?[index]['nombre']),
-                          /* onTap: (() async {
-                            print(Text(snapshot.data?[index]['nombre']));
-                            print(context);
-                            Navigator.pushNamed(context, '/edit',
-                                arguments:/* {
-                                  "nombre":snapshot.data?[index]['nombre']
-                                }*/
-                               // ArgumentoEditar()
-                                );
-                          }),*/
-
-                         onTap: (() async{
-                           await Navigator.pushNamed(context, '/edit',arguments: {
-                            'nombre': snapshot.data?[index]['nombre'],
-                            'uid': snapshot.data?[index]['uid']
-                           });
-
-                           setState(() {
-                             
-                           });
-                          }),
-                          ),
-
                         );
                         
               },);

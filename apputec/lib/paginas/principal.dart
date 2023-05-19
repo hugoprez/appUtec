@@ -3,6 +3,7 @@ import 'package:apputec/paginas/menu/recuperarcontrasena.dart';
 import 'package:apputec/paginas/menu/consultamaterias.dart';
 import 'package:apputec/paginas/menu/home.dart';
 import 'package:apputec/paginas/menu/login.dart';
+import 'package:apputec/paginas/menu/estudiantes.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -26,7 +27,8 @@ class _MyHomePageState extends State<MyHomePage> {
     Login(),
     Home(),
     ConsultarMaterias(),
-    RecuperarContrasena()
+    RecuperarContrasena(),
+    MostrarEstudiantes()
   ];
 
   @override
@@ -44,7 +46,8 @@ class _MyHomePageState extends State<MyHomePage> {
               BottomNavigationBarItem(icon: Icon(Icons.local_pizza),label: "Login"),
               BottomNavigationBarItem(icon: Icon(Icons.home ),label: "Home"),
               BottomNavigationBarItem(icon: Icon(Icons.food_bank_sharp),label: "Materias"),
-              BottomNavigationBarItem(icon: Icon(Icons.local_pizza),label: "Recuperar contra")
+              BottomNavigationBarItem(icon: Icon(Icons.local_pizza),label: "Recuperar contra"),
+              BottomNavigationBarItem(icon: Icon(Icons.person_2),label: "Estudiantes")
             ],
         ),
 
