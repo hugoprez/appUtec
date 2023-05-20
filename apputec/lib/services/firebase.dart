@@ -35,8 +35,13 @@ Future<List> getEstudiante() async {
 }
 
 //agregar estudiante
-Future<void> agregarEstudiante(Int codigo, String estudiante,String apellido,Int tpUsuario) async {
-  await base.collection('Estudiante').add({"IdEstudiante": codigo,"NombreEstudiante": estudiante,"ApellidoEstudiante": apellido,"IdUsuario": tpUsuario});
+Future<void> agregarEstudiante(int IdEstudiante, String NombreEstudiante,String ApellidoEstudiante,int tpUsuario) async {
+  await base.collection('Estudiante').add({
+    "IdEstudiante": IdEstudiante,
+    "NombreEstudiante": NombreEstudiante,
+    "ApellidoEstudiante": ApellidoEstudiante,
+    "IdUsuario": tpUsuario,
+  });
 }
 
 

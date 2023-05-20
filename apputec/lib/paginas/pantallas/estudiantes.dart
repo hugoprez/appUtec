@@ -10,6 +10,11 @@ class MostrarEstudiantes extends StatefulWidget {
 }
 
 class _MostrarEstudiantesState extends State<MostrarEstudiantes> {
+  TextEditingController IdController = TextEditingController();
+  TextEditingController NombreController = TextEditingController(text: "");
+  TextEditingController ApellidoController = TextEditingController(text: "");
+  TextEditingController tpUsuarioController = TextEditingController();
+
   @override
   String information = '';
 
@@ -36,12 +41,60 @@ class _MostrarEstudiantesState extends State<MostrarEstudiantes> {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-      appBar: AppBar(
-        title: Text('base de datos con firebase '),
-      ),
       body: Container(
         child: Column(
           children: [
+            Padding(
+              padding: EdgeInsets.all(25.0),
+              child: Column(
+                children: [
+                  Center(
+                    child: const Text(
+                      'pagina agregar Estudiante',
+                      style: TextStyle(fontSize: 24),
+                    ),
+                  ),
+                  TextFormField(
+                    controller: IdController,
+                    keyboardType: TextInputType.number,
+                    decoration: InputDecoration(
+                      labelText: 'Ingrese un número entero',
+                    ),
+                  ),
+                  TextField(
+                    controller: NombreController,
+                    decoration: InputDecoration(hintText: 'Ingrese el nombre'),
+                  ),
+                  TextField(
+                    controller: ApellidoController,
+                    decoration:
+                        InputDecoration(hintText: 'Ingrese el apellido'),
+                  ),
+                  TextField(
+                    controller: tpUsuarioController,
+                    decoration:
+                        InputDecoration(hintText: 'Ingrese el tipo de usuario'),
+                  ),
+                  ElevatedButton(
+                      onPressed: () async {
+                        await agregarEstudiante(
+                                int.parse(IdController.text),
+                                NombreController.text,
+                                ApellidoController.text,
+                                int.parse(IdController.text))
+                            .then((_) {
+                          //Navigator.pop(context);
+                          setState(() {});
+                        });
+                        //   Navigator.pop(context);
+                         setState(() {});
+                      },
+                      
+                      child: Text("Guardar registro")),
+                  
+                ],
+              ),
+            ),
             Padding(
               padding: EdgeInsets.all(15),
               child: Text(
@@ -49,10 +102,14 @@ class _MostrarEstudiantesState extends State<MostrarEstudiantes> {
                 style: TextStyle(fontSize: 30),
               ),
             ),
+            
             Expanded(
               
+
+
               child: // Generated code for this GridView Widget...
                   GridView(
+                     
                 padding: EdgeInsets.zero,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 1,
@@ -63,10 +120,10 @@ class _MostrarEstudiantesState extends State<MostrarEstudiantes> {
                 scrollDirection: Axis.vertical,
                 children: [
                   Container(
-                   
                     //decoration: BoxDecoration(color: Colors.red),
                     child: FutureBuilder(
                       future: getEstudiante(),
+
                       builder: ((context, snapshot) {
                         if (snapshot.hasData) {
                           return GridView.builder(
@@ -82,7 +139,6 @@ class _MostrarEstudiantesState extends State<MostrarEstudiantes> {
                             itemCount: snapshot.data?.length,
                             itemBuilder: (context, index) {
                               return Container(
-                                
                                 /*decoration: BoxDecoration(
                                   color: Colors.yellow,
                                 ),*/
@@ -101,7 +157,7 @@ class _MostrarEstudiantesState extends State<MostrarEstudiantes> {
                                     child: Container(
                                       padding: EdgeInsets.all(20),
                                       // decoration: BoxDecoration(color: Colors.red),
-                                     
+
                                       child: Column(
                                         children: [
                                           Text(
@@ -110,8 +166,6 @@ class _MostrarEstudiantesState extends State<MostrarEstudiantes> {
                                               'Nombre: ${snapshot.data?[index]['NombreEstudiante']}'),
                                           Text(
                                               'Apellido: ${snapshot.data?[index]['ApellidoEstudiante']}'),
-                                          Text(
-                                              'Código de Usuario: ${snapshot.data?[index]['IdUsuario']}'),
                                         ],
                                       ),
                                     ),
@@ -131,7 +185,6 @@ class _MostrarEstudiantesState extends State<MostrarEstudiantes> {
                 ],
               ),
             ),
-            
           ],
         ),
       ),
@@ -142,6 +195,7 @@ class _MostrarEstudiantesState extends State<MostrarEstudiantes> {
           setState(() {});
           //print("Actualizar");
         },
+        backgroundColor: Color(0xFF9D5871),
         child: Icon(Icons.add),
       ),
     ));
