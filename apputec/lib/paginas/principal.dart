@@ -3,7 +3,7 @@ import 'package:apputec/paginas/menu/recuperarcontrasena.dart';
 import 'package:apputec/paginas/menu/consultamaterias.dart';
 import 'package:apputec/paginas/menu/home.dart';
 import 'package:apputec/paginas/menu/login.dart';
-import 'package:apputec/paginas/menu/estudiantes.dart';
+import 'package:apputec/paginas/pantallas/estudiantes.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
