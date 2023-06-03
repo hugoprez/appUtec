@@ -27,8 +27,8 @@ class _MyHomePageState extends State<MyHomePage> {
     Login(),
     Home(),
     ConsultarMaterias(),
-    RecuperarContrasena(),
-    MostrarEstudiantes()
+    /*RecuperarContrasena(),
+    MostrarEstudiantes()*/
   ];
 
   @override
@@ -45,9 +45,9 @@ class _MyHomePageState extends State<MyHomePage> {
              items:[
               BottomNavigationBarItem(icon: Icon(Icons.local_pizza),label: "Login"),
               BottomNavigationBarItem(icon: Icon(Icons.home ),label: "Home"),
-              BottomNavigationBarItem(icon: Icon(Icons.food_bank_sharp),label: "Materias"),
-              BottomNavigationBarItem(icon: Icon(Icons.local_pizza),label: "Recuperar contra"),
-              BottomNavigationBarItem(icon: Icon(Icons.person_2),label: "Estudiantes")
+              BottomNavigationBarItem(icon: Icon(Icons.person_2),label: "Estudiantes"),
+              /*BottomNavigationBarItem(icon: Icon(Icons.local_pizza),label: "Recuperar contra"),
+              BottomNavigationBarItem(icon: Icon(Icons.person_2),label: "Estudiantes")*/
             ],
         ),
 
